@@ -21,4 +21,5 @@ Agree to continue connecting, and enter your password. Then you will be connecte
 ## Trying some commands
 These are the commands I tried.
 ![image](https://user-images.githubusercontent.com/122485081/211912119-f7d5fb1d-535b-4761-9125-3a62e6aeb5c5.png)
+
 It seems that each student is given their own home directory, and each student is unable to access the other students' directories.
