@@ -117,10 +117,12 @@ The average of an array full of the same number should be that same number. Howe
 
 **Bugs:**
 I noticed that, because of the portion of the code that is underlined in this image, the value determined to be the lowest will be skipped every time it occurs in the array, rather than just once.
+
 ![image](https://user-images.githubusercontent.com/122485081/215666131-f3cb7fa3-7a69-465e-b826-f51385e2fe4e.png)
 
 To fix this, I made a boolean variable that functions as a flag - once the lowest value has been left out, the rest will be summed without comparing them.
 This is my edited code:
+
 ![image](https://user-images.githubusercontent.com/122485081/215666535-d2f51d19-77fe-4e33-a6fe-2e841637f80c.png)
 
 ## Part 3 - Something new I learned
