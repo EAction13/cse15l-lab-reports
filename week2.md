@@ -1,6 +1,6 @@
-#Week 2 Lab Report - Servers and Bugs
+# Week 2 Lab Report - Servers and Bugs
 
-##Part 1 - StringServer
+## Part 1 - StringServer
 
 I used the provided folder wavelet and its files as a base for creating StringServer.java. 
 I made no changes to Server.java so I will not include it in my screenshots. 
@@ -91,7 +91,7 @@ Each time we use /add-message, the string in the URL is added to the ArrayList s
 strList is declared outside of the method handleRequest, so that it does not get overwritten every time a URL is used.
 To return strList, I made a new String called temp every time a valid URL is given. A for loop is used to copy the contents of strList into temp, including a newline after every element.
 
-##Part 2 - Debugging in Lab 3
+## Part 2 - Debugging in Lab 3
 
 In this lab report, I will look at how I debugged the method `averageWithoutLowest(double[] arr)` from ArrayExamples.java.
 
@@ -123,7 +123,7 @@ To fix this, I made a boolean variable that functions as a flag - once the lowes
 This is my edited code:
 ![image](https://user-images.githubusercontent.com/122485081/215666535-d2f51d19-77fe-4e33-a6fe-2e841637f80c.png)
 
-##Part 3 - Something new I learned
+## Part 3 - Something new I learned
 Despite taking a Java class before, I did not know about JUnit and its usefulness in debugging.
 I think it is a very useful tool in writing and running tests in an organized manner.
 I also did not know how to create a web server in Java until this class.
