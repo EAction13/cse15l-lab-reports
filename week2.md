@@ -94,12 +94,15 @@ To return strList, I made a new String called temp every time a valid URL is giv
 ##Part 2 - Debugging in Lab 3
 
 In this lab report, I will look at how I debugged the method `averageWithoutLowest(double[] arr)` from ArrayExamples.java.
+
 **Failure-inducing input:**
 When I input an array with all of the numbers the same, the test did not pass:
+
 ![image](https://user-images.githubusercontent.com/122485081/215664839-3d0bdde1-af6c-472b-8a19-ee75b06cc5bc.png)
 
 **Successful tests:**
 When I input this empty array, the test passed - the output was 0 as expected.
+
 ![image](https://user-images.githubusercontent.com/122485081/215663259-51fb8c8e-d019-42b2-84f0-0a47daa99226.png)
 
 The output was also 0, as expected, when I input an array with only one element.
@@ -107,8 +110,20 @@ After that, I input arrays with multiple values, where all of the values were di
 
 **Symptoms:**
 The failure-inducing input gave this result:
+
 ![image](https://user-images.githubusercontent.com/122485081/215665092-58af4963-0ab5-4aae-990d-9a7f93535aa2.png)
 
 The average of an array full of the same number should be that same number. However, the result given was 0.
 
 **Bugs:**
+I noticed that, because of the portion of the code that is underlined in this image, the value determined to be the lowest will be skipped every time it occurs in the array, rather than just once.
+![image](https://user-images.githubusercontent.com/122485081/215666131-f3cb7fa3-7a69-465e-b826-f51385e2fe4e.png)
+
+To fix this, I made a boolean variable that functions as a flag - once the lowest value has been left out, the rest will be summed without comparing them.
+This is my edited code:
+![image](https://user-images.githubusercontent.com/122485081/215666535-d2f51d19-77fe-4e33-a6fe-2e841637f80c.png)
+
+##Part 3 - Something new I learned
+Despite taking a Java class before, I did not know about JUnit and its usefulness in debugging.
+I think it is a very useful tool in writing and running tests in an organized manner.
+I also did not know how to create a web server in Java until this class.
