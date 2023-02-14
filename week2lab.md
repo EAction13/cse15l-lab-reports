@@ -14,18 +14,11 @@ import java.util.*;
 
 
 class Handler implements URLHandler {
-    /*
-    // The one bit of state on the server: a number that will be manipulated by
-    // various requests.
-    int num = 0;
-    */
 
     ArrayList<String> strList = new ArrayList();
 
     public String handleRequest(URI url) {
         
-        //String temp = "";
-        //The default page with no extra path just shows the number
         if (url.getPath().equals("/")) {
             String temp = "";
             for(int i = 0; i < strList.size(); i++){
@@ -33,16 +26,7 @@ class Handler implements URLHandler {
                 temp += "\n";
             }
             return temp;
-        } /*
-        //The path /increment adds 1 to the number and displays "Number incremented!"
-        else if (url.getPath().equals("/increment")) {
-            num += 1;
-            return String.format("Number incremented!");
-        } 
-        //Allows the user to add a number to the current number
-        //by entering it as a query after the path /add.
-        else {*/
-            
+        }
 
             System.out.println("Path: " + url.getPath());
             if (url.getPath().contains("/add-message")) {
@@ -87,6 +71,9 @@ I set up the server and tried using /add-message twice:
 In both of these screenshots, the same methods are called and the same fields are changed.
 The method main() in the class StringServer was called when setting up the server using the terminal.
 Each time a new URL is used, handleRequest(URI url) is called.
+
+handleRequest first checks if the path is simply "/", in which case it displays the strings that have been added. After that, if the path contains the string "/add-message". If so, it breaks the query up into an array of strings. The query is broken up when there is a "=" character, in this case. If the URL is written properly, there will be the character "s" before the "=". The code checks for this, and if the first element in the string array is "s", thenthe second element in the array is added into the list of strings that will be displayed on the website. Finally, the total list of strings is displayed.
+
 Each time we use /add-message, the string in the URL is added to the ArrayList strList.
 strList is declared outside of the method handleRequest, so that it does not get overwritten every time a URL is used.
 To return strList, I made a new String called temp every time a valid URL is given. A for loop is used to copy the contents of strList into temp, including a newline after every element.
